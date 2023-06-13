@@ -1,0 +1,96 @@
+
+$primary: #2f2e41;
+$secondary: #bdbdbd;
+$dark: #000000;
+$light: #f4fcff;
+
+$body-color: #656565;
+$body-bg: #f4f4f4;
+
+
+@import "./bootstrap/scss/bootstrap";
+
+
+
+
+.dark-mode {
+
+  $primary: #2f2e41;
+  $secondary: #bdbdbd;
+  $dark: #bbbbbb;
+  $light: #f4fcff;
+
+
+  $theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "dark": $dark,
+    "light": $light,
+  );
+
+  /* redefine theme color variables */
+  @each $color, $value in $theme-colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+  }
+
+  $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+  @each $color, $value in $theme-colors-rgb {
+    --#{$variable-prefix}#{$color}-rgb: #{$value};
+  }
+
+  $body-color: #ffffff;
+  $body-bg: #262830;
+
+  --#{$variable-prefix}body-color: #{$body-color};
+  --#{$variable-prefix}body-bg: #{$body-bg};
+
+
+
+  .btn-primary {
+    @include button-variant(
+      #f4fcff,
+      #f4fcff,
+      $primary,
+      #ececec,
+      #ececec,
+      $primary,
+      #dfdfdf,
+      #f0f0f0,
+      #343348,
+      #959595,
+      #959595,
+      #ffffff
+    );
+    color: $primary;
+    border-radius: 12px;
+  }
+
+  .btn-secondary {
+    @include button-variant(
+      #54565e,
+      #54565e,
+      $body-color,
+      #54565e,
+      #54565e,
+      #d4d4d4,
+      #54565e,
+      #54565e,
+      #d4d4d4,
+      #54565e,
+      #54565e,
+      #ffffff
+    );
+    color: $body-color;
+    border-radius: 5px;
+  }
+
+
+}
+
+
+
+
+
+
+
