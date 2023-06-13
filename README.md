@@ -29,3 +29,6 @@ A custom WordPress theme to build a code learning platform. 2ByteCode includes s
 - Cross browser support
 - Fully responsive
 
+
+**Related:
+[2ByteCode Plugin](https://github.com/2bytecoder/2bytecode-plugin)**
