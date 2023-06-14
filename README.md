@@ -31,4 +31,4 @@ A custom WordPress theme to build a code learning platform. 2ByteCode includes s
 
 
 **Related:
-[2ByteCode Plugin](https://github.com/2bytecoder/2bytecode-plugin)**
+[2ByteCode Plugin](https://github.com/pathak404/2bytecode-plugin)**
